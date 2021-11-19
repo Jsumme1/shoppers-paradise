@@ -1,10 +1,24 @@
 const router = require('express').Router();
+const sequelize = require("../../config/connection");
 const { Category, Product } = require('../../models');
 
 // The `/api/categories` endpoint
+const categoriesRoutes = require('./category-routes');
+router.use("/category-routes", categoriesRoutes);
 
 router.get('/', (req, res) => {
-    Category.findAll()
+    Category.findAll({
+      attributes:[
+        'id',
+        'category_name'
+      ],
+      include: [
+        {
+        model: Product,
+        attributes: ['id','product_name', 'price', 'stock', 'category_id']
+      }
+      ]
+    })
       .then((dbUserData) => res.json(dbUserData))
       .catch((err) => {
         console.log(err);
@@ -19,6 +33,13 @@ router.get('/:id', (req, res) => {
       where: {
         id: req.params.id,
       },
+      attributes: ["id", "category_name"],
+      include: [
+        {
+          model: Product,
+          attributes: ["id", "product_name", "price", "stock", "category_id"],
+        }
+      ]
     })
       .then((dbUserData) => {
         if (!dbUserData) {
