@@ -3,8 +3,8 @@ const sequelize = require("../../config/connection");
 const { Category, Product } = require('../../models');
 
 // The `/api/categories` endpoint
-const categoriesRoutes = require('./category-routes');
-router.use("/category-routes", categoriesRoutes);
+// const categoriesRoutes = require('./category-routes');
+// router.use("/category-routes", categoriesRoutes);
 
   // find all categories
   // be sure to include its associated Products

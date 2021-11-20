@@ -1,7 +1,6 @@
 # shoppers-paradise
-
   
-## This app creates an employee tracker database with a command line user interface.
+## This app creates an the back end database management for an e-commerce site.
 ## Table of Contents
 * [Installation](#installation)
 * [Usage](#usage)
@@ -12,7 +11,7 @@
 * [Questions](#questions)
 
 ## Installation
- To use this app on your local machine, you will need to also install npm inquier, express and console.table which are not included on the GitHub link due to size. 
+ To use this app on your local machine, you will need to also install npm inquirer, express and console.table which are not included on the GitHub link due to size. 
 ## Usage
 AS A business owner
 I WANT to be able to view and manage the departments, roles, and employees in my company
