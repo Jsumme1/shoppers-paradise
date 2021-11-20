@@ -15,20 +15,20 @@ Category.init(
       // instruct that this is the Primary Key
       primaryKey: true,
       // turn on auto increment
-      autoIncrement: true,
+      autoIncrement: true
     },
-    // define a username column
-    catergory_name: {
+    // define a category name column
+    category_name: {
       type: DataTypes.STRING,
-      allowNull: false,
-    },
+      allowNull: false
+    }
   },
   {
     sequelize,
     timestamps: false,
     freezeTableName: true,
     underscored: true,
-    modelName: 'category',
+    modelName: 'category'
   }
 );
 
