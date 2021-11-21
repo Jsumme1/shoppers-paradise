@@ -34,7 +34,7 @@ Made by Julie
 
 ## Video Link
 
-[https://watch.screencastify.com/v/5ZYkMJzrRG0STbYfsOat]
+[https://watch.screencastify.com/v/cBqL3pEjKVjWAZg5nMb3]
 
 ## Software
 This app was created using javaScript, jsNode npm dotenv, MySQL2, Sequelize packages
